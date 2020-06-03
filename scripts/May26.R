@@ -37,6 +37,9 @@ likelihood <- c(dbinom(nH, nH+nT, 0.5), # H1
                 dbinom(nH, nH+nT, 0.75), # H2
                 dbinom(nH, nH+nT, 0.25)) # H3
                 
+# dbinom(nH, nH+nT, 0.75) -> 0.75*0.75*(1-.75)
+# HHT HTH THH
+
 # Bayes rule says this:
 # P(H1 | data) is proportional to P(data | H1) P(H1)
 # posterior                       likelihood   prior
@@ -55,6 +58,7 @@ likelihood <- c(dbinom(nH, nH+nT, 0.5), # H1
 
 posterior = prior*likelihood / sum(prior*likelihood)
 # P(data) = sum(prior*likelihood)
+
 
 # Dutch book arguments
 
