@@ -13,7 +13,7 @@ transformed data {
 parameters {
     real b0;
     real b1;
-    real s;
+    real<lower=0> s;
 }
     
 transformed parameters {
